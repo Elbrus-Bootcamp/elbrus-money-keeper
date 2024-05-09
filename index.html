@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/img/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/img/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/img/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/img/icon-256x256.png" />
+    <title>Elbrus Money Keeper: Auth</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <section class="container">
+        <h1 class="display-3">Elbrus Money Keeper</h1>
+        <form class="mt-3" id="authForm" method="GET" action="/dashboard.html">
+          <div class="form-floating mb-3">
+            <input required name="email" type="email" class="form-control" placeholder>
+            <label>Ваша электронная почта</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input required name="password" type="password" class="form-control" placeholder>
+            <label>Ваш пароль</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Далее</button>          
+        </form>
+    </section>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        
+        <div class="toast-header">
+          <img src="./img/icon-48x48.png" class="rounded me-2" alt="...">
+          <strong class="me-auto">Elbrus Bootcamp</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Некорректный пароль или электронная почта
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/img/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="48x48" href="/img/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/img/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/img/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/img/icon-256x256.png" />
+    <title>Elbrus Money Keeper: Dashboard</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <section class="container-fluid mb-5">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/dashboard.html">Elbrus Money Keeper</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/dashboard.html">Главная</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Статистика
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/income.html">Доходы</a></li>
+                      <li><a class="dropdown-item" href="/expenses.html">Расходы</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a id="profileName" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Профиль ()
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/profile.html">Изменить</a></li>
+                      <li><button id="logoutBtn" class="dropdown-item">Выйти</button></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Введите данные" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+    </section>
+    <section class="container">
+      <div class="input-group input-group-lg mb-5">
+        <input id="balance" type="number" class="form-control" placeholder="Стартовая сумма">
+        <button id="btnSetBalance" class="btn btn-outline-secondary" type="button">Задать баланс</button>
+      </div>
+      <div class="input-group input-group-lg">
+        <select class="form-select" id="typeTransaction" >
+          <option selected>Выбор действия</option>
+          <option value="income">Доход</option>
+          <option value="expenses">Расход</option>          
+        </select>
+        <input type="text" class="form-control" id="descTransaction" placeholder="Описание">
+        <input type="number" class="form-control" id="sumTransaction" placeholder="Сумма">
+        <button id="btnUpdateBalance" class="btn btn-outline-secondary" type="button">Учесть</button>
+      </div>
+    </section>
+  </body>
+</html>
